@@ -128,10 +128,10 @@ The operation `a//b` returns the (integer) quotient of `a` divided by `b`, and `
 
 `Python` follows the order of operations in order from left to right, except for powers which are performed right to left.
 
-1. +x, -x
-2. x ** y
-3. x * y, x / y, x // y, x % y
-4. x + y, x - y
+1. `+x`, `-x`
+2. `x ** y`
+3. `x * y`, `x / y`, `x // y`, `x % y`
+4. `x + y`, `x - y`
 
 When it isn't clear use brackets!
 
@@ -197,16 +197,16 @@ We want to keep track of when our schedule at MC. Starting a 9 AM, add time in h
 3. The time on the 12 hour and whether it is AM or PM.
 
     time = 9
-
-    # Morning class
+    
+    \# Morning class
     time += 0
-    # Morning elective
+    \# Morning elective
     time += 0
-    # Lunch
+    \# Lunch
     time += 0
-    # Afternoon class
+    \# Afternoon class
     time += 0
-
+    
     print()
 
 ## 5. Comments
@@ -214,15 +214,15 @@ We want to keep track of when our schedule at MC. Starting a 9 AM, add time in h
 To include one-line comments, use `#`. Python will ignore these. This is useful for giving line-by-line explanations.
 
    x = 7
-   # x += 4
+   \# x += 4
    x += 1
    print(x)
    >>>> 8
    
    y = 13
-   print(y // 5) # This is an integer
+   print(y // 5) \# This is an integer
    >>>> 2
-   print(y/5) # This is a decimal
+   print(y/5) \# This is a decimal
    >>>> 2.6
 
 To include longer comments use triple quotations `"""like this"""`. This is used for longer explanations of code, usually at the beginning of the code. It can skip lines.
@@ -261,8 +261,8 @@ Ursula has written some code for a geometry project that automotically computes 
     pi = 3.14
     r = 4
     
-    print(x*y) # Area of ...
-    print(x**2) # Area of ...
+    print(x*y) \# Area of ...
+    print(x**2) \# Area of ...
     print(x*y/2)
     print(pi*r**2)
     print(4/3*pi*r**3)
