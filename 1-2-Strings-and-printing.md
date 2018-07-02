@@ -7,11 +7,12 @@ In this lesson we'll learn the basics of handling strings.
 1. Escaping characters
 2. Basic string concatination (`+`)
 3. Index and Truncating
-4. String methods (`.upper()`, `.lower()`, `.split()`, `len()`, `.replace()`, `.find()`)
-5. String replacement formatting (`%`)
-6. Input from the user (`input()`, `raw_input()`)
+4. String methods (`.upper()`, `.lower()`, `len()`, `.replace()`, `.find()`)
+5. String replacement formatting (`.format()`)
+6. Input from the user (`input()`)
 
 Project: Madlibs.
+Project: Area of a regular polygon.
 
 ## 1. Escaping characters
 
@@ -46,7 +47,7 @@ print(full_info)
 
 This way of formatting sentences is tedious and hard to read, but we'll see a better way of formatting sentences in section 5.
 
-### Exercise
+### Exercise - Displaying results of code
 
 You have run a program that looks for large [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple). Your code has found one after running for about a while.
 
@@ -135,7 +136,7 @@ n2 = 7442000000 # Population of the Earth, 2016
 n3 = 2**2**2**2**2 # Make a guess first
 ```
 
-## 5. String replacement formatting (`%`)
+## 5. String replacement formatting
 
 The best way to insert many variables into a string is by using **string replacement** formatting.
 
@@ -159,12 +160,50 @@ symbol| converts to
 `d` | integer
 `f` | float
 `.2f`| float, with 2 points of accuracy
+`.4s` | string, only first 4 characters
+
+This formatting [is very flexible](https://www.digitalocean.com/community/tutorials/how-to-use-string-formatters-in-python-3), but this is about all we will need.
+
+### Exercise - Displaying results from code (part 2)
+
+Let's look at a previous exercise where we wanted to display the results of code we ran to find Pythagorean triples. Display the results of the code by **using string formatting** as above. This time, when displaying the time, use minutes and give accuracy to within 0.05.
+
+```python
+x = 18108
+y = 252685
+z = 253333
+time = 1143.45369 # In seconds
+
+display_info = "" # Your code here.
+
+print(display_info.format())
+```
+
+## 6. Input from the user (`input()`)
+
+To prompt the user for keyboard input use `input()`. This will assume the user is giving a `string`, so you may want to adjust the type of the input by wrapping it in a function like `int( input() )`.
+
+You can prompt the user with text by including it in the argument, `input(text)`.
+
+```python
+name = input("What is your name, human?")
+---> Ursula
+job = input("What is your dream job, human?")
+---> coder
+print( "Hello {}! I also want to be a {}.".format(name, job) )
+>>>> Hello Ursula! I also want to be a coder.
+```
 
 ### Exercise
 
+Ursula has written a calulator that computes the perimeter of a rectangle. Unfortunately, it has a bug in it. Please help her fix it!
 
+```python
+w = input("Width of rectangle =")
+h = input("Height of rectangle =")
 
-## 6. Input from the user (`input()`, `raw_input()`)
+print(w+w+h+h)
+```
 
 ## Project: Madlibs.
 
@@ -177,6 +216,19 @@ In this project you will make a Madlib. A Madlib is a word game where one player
 
 For example, choose a `noun` and an `adjective`. Now place them in this text:
 
-> I was late for my Python class today because I forgot my [---*noun*---] in my room. It got very messy and [---adjective---]
+> I was late for my Python class today because I forgot my [---*noun*---] in my room. It got very messy and [---*adjective*---]
 
 Your task is to use string replacement and user input to create a madlib game. You can use [this math-themed Madlib](https://www.woojr.com/wp-content/uploads/2017/07/math-madlibs.jpg) as inspiration, or use it directly. After you've made it, upload it to the common folder for others to play.
+
+## Project: calculator
+
+In this project you will create a calculator for the area of a regular polygon with `n>2` sides if you know the side length `s`. Allow the user to supply `n` and `s`. Then give an English sentence reply with the area.
+
+This [wikipedia page](https://en.wikipedia.org/wiki/Apothem) should help you find the area formula for a regular polygon. You will use the `math` package. We will learn more about packages later.
+
+```python
+import math
+
+pi = math.pi # This is 3.14159...
+math.tan() # Insert an argument to use tan
+```
