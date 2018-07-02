@@ -227,7 +227,7 @@ In this project you will create a calculator for the area of a regular polygon w
 This [wikipedia page](https://en.wikipedia.org/wiki/Apothem) should help you find the area formula for a regular polygon. You will use the `math` package. We will learn more about packages later.
 
 ```python
-import math
+import math # Include this at the beginning of your code
 
 pi = math.pi # This is 3.14159...
 math.tan() # Insert an argument to use tan
