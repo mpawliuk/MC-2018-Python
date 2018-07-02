@@ -11,7 +11,7 @@ In this lesson we'll learn the basics of handling strings.
 5. String replacement formatting (`.format()`)
 6. Input from the user (`input()`)
 
-Project: Madlibs.
+Project: Madlibs.    
 Project: Area of a regular polygon.
 
 ## 1. Escaping characters
