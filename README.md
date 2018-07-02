@@ -19,7 +19,7 @@ https://projecteuler.net/archives
 3. Arithmetic (data type, `+`, `-`, `*`, `/`, `%`, powers)
 4. Updating variables (`+=`, `*=`)
 5. Comments (`#`, `"""Docstrings"""`)
-6. Numbers (`Int`, `Float`, 1/3, division)
+6. Numbers (`Int`, `Float`, division)
 7. Booleans (`True`, `False` using `1` or `0`)
 8. Changing data types (`int()`, `float()`, `str()`, `type()`)
 
@@ -28,13 +28,14 @@ Project: Largest number with small number of characters, Project Euler Problem 6
 ### 1-2. Strings and Printing
 
 1. Escaping characters
-2. Index and Truncating
-3. String methods (`.upper()`, `.lower()`, `.split()`, `len()`, `.replace()`, `.find()`)
-4. Basic string concatination (`+`)
+2. Basic string concatination (`+`)
+3. Index and Truncating
+4. String methods (`.upper()`, `.lower()`, `len()`, `.replace()`, `.find()`)
 5. String replacement formatting (`%`)
-6. Input from the user (`input()`, `raw_input()`)
+6. Input from the user (`input()`)
 
-Project: Madlibs.
+Project: Madlibs.   
+Project: Area of a regular polygon.
 
 ### 1-3. Conditionals and Control Flow
 
