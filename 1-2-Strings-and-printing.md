@@ -5,9 +5,9 @@ In this lesson we'll learn the basics of handling strings.
 ## Outline
 
 1. Escaping characters
-2. Index and Truncating
-3. String methods (`.upper()`, `.lower()`, `.split()`, `len()`, `.replace()`, `.find()`)
-4. Basic string concatination (`+`)
+2. Basic string concatination (`+`)
+3. Index and Truncating
+4. String methods (`.upper()`, `.lower()`, `.split()`, `len()`, `.replace()`, `.find()`)
 5. String replacement formatting (`%`)
 6. Input from the user (`input()`, `raw_input()`)
 
@@ -25,10 +25,45 @@ Fix the following code by escaping the problem characters.
 greeting = 'Let's make math today!'
 response = "My friend said, "that's a good idea."."
 hashtag = "#YOLO"
-print(greeting, response,hashtag)
+print(greeting, response, hashtag)
 ```
 
-## 2. Index and Truncating
+## 2. Basic string concatination (`+`)
+
+To concatenate ("chain together") strings we use the `+` operation. Make sure that you are adding `string`s together; if you try to add a string and an integer you will get a `type error`.
+
+```python
+first_name = "Frances"
+middle_name = "E."
+last_name = "Allen"
+year = 1932
+
+full_info = first_name + " " + middle_name + " " + last_name + ". Born in " + str(year) + "."
+
+print(full_info)
+>>>> Frances E. Allen. Born in 1932.
+```
+
+This way of formatting sentences is tedious and hard to read, but we'll see a better way of formatting sentences in section 5.
+
+### Exercise
+
+You have run a program that looks for large [Pythagorean triples](https://en.wikipedia.org/wiki/Pythagorean_triple). Your code has found one after running for about a while.
+
+Print out a sentence (`display_info`) that displays your triple and the number of minutes it took (rounded to the nearest minute). Make the sentence readable in English.
+
+```python
+x = 18108
+y = 252685
+z = 253333
+time = 1143.45369 # In seconds
+
+display_info = "" # Your code here.
+
+print(display_info)
+```
+
+## 3. Index and Truncating
 
 You can extract letters from a string by their index. You can extract substrings using `x[start:end]` notation. Counting starts at `0`. If you use negative numbers then you count from the right.
 
@@ -42,15 +77,92 @@ last_name = name[-5:]
 print(first_name, last_name)
 >>>> Ursula Coder
 ```
+You can find the index of a character in a string by calling `x.index(character)`. This will give you the first instance of the character in the string if it exists.
+
+```python
+name_id = "Shafi Goldwasser"
+space_index = name_id.index(" ")
+first_name = name_id[:space_index]
+last_name = name_id[space_index+1:]
+print(first_name)
+>>>> Shafi
+print(last_name)
+>>>> Goldwasser
+```
+
+### Exercise - Sensitive Credit Card Numbers
+
+You are in charge of handling sensitive data. For each of these credit card numbers you need to replace the inner 8 digits with `*`s. For example, `4520 1234 5678 0001` should become `4520 **** **** 0001`. 
+
+```python
+card1 = "1234 5678 9876 5432"
+card2 = "5412 7501 2345 0987"
+card3 = "4000 1234 5678 9010"
+```
+
+### Exercise - Sensitive Email Adresses
+
+You are again in charge of handling sensitive data, but this time it's with email addresses. For each of these emails you need to replace the user name with 5 `*`s, except for the first letter. For example, `ursula_the_coder@bad.programming.com` should become `u*****@bad.programming.com`. Use the `.index()` method since the emails have different lengths.
+
+```python
+email1 = ada_lovelace@computing.uk
+email2 = grace.m.hopper@us.gov.com
+email3 = evelyn_boyd_granville@IBM.computing.com
+```
+
+## 4. String methods (`.upper()`, `.lower()`, `len()`, `.replace()`, `.find()`)
+
+Strings have lots of built-in methods you can perform on them. The most useful one is `len(x)` which returns the length of `x`.
+
+`x = "Ursula the Coder"`|result
+----|----
+`len(x)` | 16
+`x.upper()` | `URSULA THE CODER`
+`x.lower()` | `ursula the coder`
+`x.replace("e", "*")` | `Ursula th* Cod*r`
+`x.find("the")` | 8
+`x.count(' ')` | 2
+
+There are [many other string methods](https://docs.python.org/3/library/stdtypes.html#string-methods) you can use. If you need to perform a common task on strings you should look to see if there is a method for it!
+
+### Exercise
+
+It's often very useful to know how many digits a number has. Using the tools we have so far, find the number of digits of the following numbers. `int`s do not have a `len()` method, so you won't be able to just take `len(143)`. However, `string`s do have a `len()` method...
+
+```python
+n1 = 314159 #
+n2 = 7442000000 # Population of the Earth, 2016
+n3 = 2**2**2**2**2 # Make a guess first
+```
+
+## 5. String replacement formatting (`%`)
+
+The best way to insert many variables into a string is by using **string replacement** formatting.
+
+```python
+first_name = "Frances"
+middle_name = "E."
+last_name = "Allen"
+year = 1932
+
+full_info = "{} {} {}. Born in {}.".format(first_name, middle_name, last_name, year)
+
+print(full_info)
+>>>> Frances E. Allen. Born in 1932.
+```
+
+Here is a table of the formatting:
+
+symbol| converts to
+---|---
+`s` | string
+`d` | integer
+`f` | float
+`.2f`| float, with 2 points of accuracy
+
 ### Exercise
 
 
-
-## 3. String methods (`.upper()`, `.lower()`, `.split()`, `len()`, `.replace()`, `.find()`)
-
-## 4. Basic string concatination (`+`)
-
-## 5. String replacement formatting (`%`)
 
 ## 6. Input from the user (`input()`, `raw_input()`)
 
