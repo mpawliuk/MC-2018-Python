@@ -1,5 +1,11 @@
 # Coding with Python - Syllabus - MC 2018
 
+**Instructor**: Micheal Pawliuk (University of Calgary)    
+**email**: mpawliuk@gmail.com
+
+**Time**: 10:40 - noon.   
+**Dates**: 7/10-7/12, 7/16-7/19, 7/23-7/26. 2018. 
+
 Every class will introduce some basic concepts in Python, and give students opportunities to code and play around with the concepts. Every class will have a couple of goal projects that show off the topics learned in that class.
 
 The syllabus is meant to complement the (free) Codecademy Python course. Students can use that course to reinforce and practice outside of class time. It contains other exercises and projects that students may wish to attempt. This class will be specialized towards using Python as a mathematician would use it.
