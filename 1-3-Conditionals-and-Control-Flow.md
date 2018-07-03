@@ -90,9 +90,35 @@ print( x and y or x and not z)
 
 ### Exercise
 
+Ursula has written some code that checks if a number is in a certain range. Her code is horrible. Please help fix it.
+
+```python
+n = 7
+x = n < 5
+y = 10 < n
+
+print( not not not not not (x and y) )
+
+```
+
+## 3. Conditionals (`if`/`else`, `elif`, indents, formatting)
+
+The conditional `if` statements run code if a condition is `True`. The code to run is indented by a tab.
+
+```python
+
+# Try changing n and m.
+n = 2**3
+m = 3**2
+
+if n < m:
+	print( "{} < {}.".format(n, m) )
+
+if m < n:
+	print( "{} < {}.".format(m, n) )
+```
 
 
-## 3. Conditionals (`If`/`else`, `elif`, indents, formatting)
 
 ## 4. How Python treats non-Booleans
 
