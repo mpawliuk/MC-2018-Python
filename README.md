@@ -31,7 +31,7 @@ Project: Largest number with small number of characters, Project Euler Problem 6
 2. Basic string concatination (`+`)
 3. Index and Truncating
 4. String methods (`.upper()`, `.lower()`, `len()`, `.replace()`, `.find()`)
-5. String replacement formatting (`%`)
+5. String replacement formatting (`.format()`)
 6. Input from the user (`input()`)
 
 Project: Madlibs.   
