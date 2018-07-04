@@ -113,12 +113,58 @@ m = 3**2
 
 if n < m:
 	print( "{} < {}.".format(n, m) )
-
+>>>> 8 < 9.
 if m < n:
 	print( "{} < {}.".format(m, n) )
 ```
 
+An `if` statement can be followed by an `else` statement, which runs only when the `if` statement is `False`.
 
+```python
+
+n = 7
+
+if n%2 == 0:
+	print("{} is even.".format(n))
+else:
+	print("{} is odd.".format(n))
+>>> 7 is odd.
+```
+
+For multiple cases you can use `elif` ("else if") which also checks a condition.
+
+```python
+
+n = 7
+
+if n%2 == 0:
+	print("{} is even.".format(n))
+elif n%4 == 1:
+	print("{} is 1 more than a multiple of 4.".format(n))
+else:
+	print("{} is 3 more than a multiple of 4.".format(n))
+```
+
+You can nest `if` statements, but be careful that your code stays readable.
+
+```python
+
+# Try other choices for n and m
+n = 10
+m = 2
+
+if n:
+	if m:
+		print("A", n/m, m/n)
+	else:
+		print("B", m/n)
+else:
+	if m:
+		print("C", n/m)
+	else:
+		print("D")
+
+```
 
 ## 4. How Python treats non-Booleans
 
