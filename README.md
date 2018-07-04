@@ -1,7 +1,7 @@
 # Coding with Python - Syllabus - MC 2018
 
 **Instructor**: Micheal Pawliuk (University of Calgary)    
-**email**: mpawliuk@gmail.com
+**email**: mpawliuk+MC@gmail.com
 
 **Time**: 10:40 - noon.   
 **Dates**: 7/10-7/12, 7/16-7/19, 7/23-7/26. 2018. 
