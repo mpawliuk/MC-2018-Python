@@ -107,15 +107,29 @@ The conditional `if` statements run code if a condition is `True`. The code to r
 
 ```python
 
-# Try changing n and m.
-n = 2**3
-m = 3**2
+# We are going to buy some groceries
+wallet = 10
+items_purchased = 0
 
-if n < m:
-	print( "{} < {}.".format(n, m) )
->>>> 8 < 9.
-if m < n:
-	print( "{} < {}.".format(m, n) )
+if wallet >= 3:
+	# Buy eggs
+	items_purchased += 1
+	wallet -= 3
+if wallet >= 4:
+	# Buy milk
+	items_purchased += 1
+	wallet -= 4
+if wallet >= 2:
+	# Buy celery
+	items_purchased += 1
+	wallet -= 2
+if wallet >= 5:
+	# Buy ice cream
+	items_purchased += 1
+	wallet -= 5
+
+print("You bought {} items, and have {} dollar(s) left.".format(items_purchased, wallet))
+>>>> You bought 3 items, and have 1 dollar(s) left."
 ```
 
 An `if` statement can be followed by an `else` statement, which runs only when the `if` statement is `False`.
@@ -149,7 +163,7 @@ You can nest `if` statements, but be careful that your code stays readable.
 
 ```python
 
-# Try other choices for n and m
+# Try other choices for n and m to get each of A,B,C,D to appear.
 n = 10
 m = 2
 
@@ -190,9 +204,62 @@ else:
 
 ### Exercise
 
+Rewrite the example code from part 3 so that it doesn't use `==`. You may have to reorder the code.
 
+```python
+# Example code from section 3.
+
+n = 7
+
+if n%2 == 0:
+	print("{} is even.".format(n))
+else:
+	print("{} is odd.".format(n))
+>>> 7 is odd.
+```
 
 
 ## Project: Project Euler 1 (part 1)    
 
+In this project you will write the code for a large portion of [Project Euler Problem 1](https://projecteuler.net/problem=1) (we'll complete the code next week). Here's the statement of the problem:
+
+> If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
+
+> Find the sum of all the multiples of 3 or 5 below 1000.
+
+We will solve this question by looping over all numbers between 1 and 1000, and adding it if it satisfies the criteria (a multiple of 3 or 5). We don't know how to loop yet, so for now, you should write the part of the code that:
+
+1. Declares a variable `total` that will keep track of the sum so far. (What should you initialize it as?)
+2. Checks if `n` is a multiple of 3 or 5.
+3. Adds `n` to the `total` if it is.
+
+Test your code on a variety of numbers to see if it works the way you think it should.
+
+**Note**. This Project Euler problem can be solved by hand, without a computer. Try it if you want!
+
 ## Project: Pig Latin translator.
+
+In this project you will create code that translates English words into Pig Latin. To translate a word into Pig Latin you follow these rules:
+
+1. For words that begin with consonant sounds, all letters before the initial vowel are placed at the end of the word sequence. Then, "ay" is added, as in the following examples: "pig" = "igpay", "latin" = "atinlay".
+2. When words begin with consonant clusters (multiple consonants that form one sound), the whole sound is added to the end when speaking or writing. "smile" = "ilesmay", "string" = "ingstray".
+3. For words that begin with vowel sounds, one just adds "ay" to the end. Examples are: "eat" = "eatay", "omelet" = "omeletay".
+
+You can find the full rules of [Pig Latin here](https://en.wikipedia.org/wiki/Pig_Latin#Rules), along with many more examples.
+
+Your task is to write code that turns a single `word` into Pig Latin (as `pl_word`). Once you've done that, you can insert your code into the following code which translates a full sentence.
+
+```python
+
+plain_text = "The quick brown fox jumps over the lazy dog."
+cipher_text = ""
+
+for word in plain_text.split():
+	# Your code here. You need to translate the string in the variable "word". 
+	# Leave the translated word as pl_word.
+	#
+	cipher_text += pl_word
+	cipher_text += " "
+
+print(cipher_text)
+```
