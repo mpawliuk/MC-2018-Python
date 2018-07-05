@@ -129,7 +129,7 @@ if wallet >= 5:
 	wallet -= 5
 
 print("You bought {} items, and have {} dollar(s) left.".format(items_purchased, wallet))
->>>> You bought 3 items, and have 1 dollar(s) left."
+>>>> You bought 3 items, and have 1 dollar(s) left.
 ```
 
 An `if` statement can be followed by an `else` statement, which runs only when the `if` statement is `False`.
