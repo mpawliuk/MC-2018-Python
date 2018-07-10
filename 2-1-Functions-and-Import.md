@@ -10,11 +10,10 @@ Packages are collections of functions that have been written by others that we c
 2. Arguments, parameters (scope)
 3. Functions without outputs
 4. Built-in functions (`min()`, `max()`, `abs()`, `len()`)
-5. Iterators
-6. Import (`from`/`import`, `random`, `math`)
-7. Math module (`sqrt`, `factorial`, `e`, `log`)
-8. Random module (`.randint(a, b)`, `.random()`, `.uniform(a,b)`, `.seed()`)
-9. Other modules. (`dir()`, `datetime`, `time`, `itertools`)
+5. Import (`from`/`import`, `random`, `math`)
+6. Math module (`sqrt`, `factorial`, `e`, `log`)
+7. Random module (`.randint(a, b)`, `.random()`, `.uniform(a,b)`, `.seed()`)
+8. Other modules. (`dir()`, `datetime`, `time`, `itertools`)
 
 **Project**: Compute e randomly by trials.
 
