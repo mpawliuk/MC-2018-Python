@@ -106,9 +106,9 @@ card3 = "4000 1234 5678 9010"
 You are again in charge of handling sensitive data, but this time it's with email addresses. For each of these emails you need to replace the user name with 5 `*`s, except for the first letter. For example, `ursula_the_coder@bad.programming.com` should become `u*****@bad.programming.com`. Use the `.index()` method since the emails have different lengths.
 
 ```python
-email1 = ada_lovelace@computing.uk
-email2 = grace.m.hopper@us.gov.com
-email3 = evelyn_boyd_granville@IBM.computing.com
+email1 = "ada_lovelace@computing.uk"
+email2 = "grace.m.hopper@us.gov.com"
+email3 = "evelyn_boyd_granville@IBM.computing.com"
 ```
 
 ## 4. String methods (`.upper()`, `.lower()`, `len()`, `.replace()`, `.find()`)
