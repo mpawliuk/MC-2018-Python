@@ -51,7 +51,7 @@ print(math.tan(pi/4), 1, math.tan(pi/4) == 1)
 >>>> 0.9999999999999999 1 False 
 ```
 
-2. Logical operators(`and`, `or`, `not`)
+## 2. Logical operators(`and`, `or`, `not`)
 
 We can combine simple statements to make more complicated expressions by connecting statements with logical operators:
 
