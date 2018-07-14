@@ -174,9 +174,26 @@ When running `for` loops, and *especially* when running nested `for` loops, be s
 
 ```python
 import random
+
+small_numbers = 0
+large_numbers = 0
 for trial in range(10):
-	for  in range():
+	x = random.random()
+	if x < 0.5:
+		small_numbers += 1
+	else:
+		large_numbers += 1
+print(small_numbers, large_numbers)
 		
+```
+
+When nesting `for` loops, be aware that the runtime of the code will quickly add up. Each loop *multiplicatively* contributes the number of elements it is looping over. So for example, the following code will require `100*200*300` = `6 000 000` steps.
+
+```python
+for a in range(100):
+	for b in range(200):
+		for c in range(300):
+			pass
 ```
 
 ## 8. `while` loop (formatting, indent, infinite loops)
@@ -223,3 +240,44 @@ while time.time() - start <2 :
 else:
 	print( "No random number was found equal to 0.1234 after 2 seconds." )
 ```
+
+## Project 1 - Produce Fibonacci numbers.
+
+In our sample code for section 8, we saw how to find the first Fibonacci number above 1000. Write code (or adapt that code) to produce the 10000th fibonacci number. Write your code as a function `fibonacci(n)` which finds the `n`th Fibonacci number, and then run your code on `n = 10000`. Be sure to test your code with small `n` as well!
+
+## Project 2 - Project Euler Problem 2.
+
+Write a solution to [Project Euler Problem 2](https://projecteuler.net/problem=2) which involves the sum of Fibonacci numbers.
+
+## Project 3 - Project Euler Problem 8.
+
+Write a solution to [Project Euler Problem 8](https://projecteuler.net/problem=8) which involves finding the largest product in a grid. Here is formatted data from the problem statement:
+
+```python
+grid = ["73167176531330624919225119674426574742355349194934",
+		"96983520312774506326239578318016984801869478851843",
+		"85861560789112949495459501737958331952853208805511",
+		"12540698747158523863050715693290963295227443043557",
+		"66896648950445244523161731856403098711121722383113",
+		"62229893423380308135336276614282806444486645238749",
+		"30358907296290491560440772390713810515859307960866",
+		"70172427121883998797908792274921901699720888093776",
+		"65727333001053367881220235421809751254540594752243",
+		"52584907711670556013604839586446706324415722155397",
+		"53697817977846174064955149290862569321978468622482",
+		"83972241375657056057490261407972968652414535100474",
+		"82166370484403199890008895243450658541227588666881",
+		"16427171479924442928230863465674813919123162824586",
+		"17866458359124566529476545682848912883142607690042",
+		"24219022671055626321111109370544217506941658960408",
+		"07198403850962455444362981230987879927244284909188",
+		"84580156166097919133875499200524063689912560717606",
+		"05886116467109405077541002256983155200055935729725",
+		"71636269561882670428252483600823257530420752963450"]
+```
+
+## Project 4 - Prime sieve.
+
+Write code that finds all primes less than 1000 by using a [sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes). We learned about this in our Number Theory class last week. Write your code so that it accepts a general `n`, and then try the special case of `n = 1000`.
+
+Save this code somewhere, and leave helpful comments for yourself, because it it very helpful for many Project Euler problems!
