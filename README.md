@@ -108,7 +108,7 @@ Project: Make a number guessing game, produce Fibonacci numbers, Prime sieve
 7. What can go in a set?
 8. Getting the number of unique elements of a list.
 
-Project: Project Euler Problem 20, Prime Factor decomposition
+Project: Project Euler Problem 47, Prime Factor decomposition
 
 ## Week 3 - Advanced basics
 
