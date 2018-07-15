@@ -13,7 +13,7 @@ We introduce two additional data types that often appear when dealing with mathe
 7. What can go in a set?
 8. Getting the number of unique elements of a list.
 
-**Project**: Project Euler Problem 20, Prime Factor decomposition
+**Project**: Project Euler Problem 47, Prime Factor decomposition
 
 ## List comprehesion 1. (using `for`)
 
@@ -110,7 +110,7 @@ print( names )
 
 ### Exercise
 
------
+Define a dictionary called `attendance` whose keys are `number_theory`, `python`, `stats` and `combinatorics`. The values of these keys should be the number of students in each of these classes for QTM Math Circle 2018 (make an educated guess).
 
 ## 5. Dictionary Methods (`.keys()`, `.values()`, sorting)
 
@@ -121,9 +121,68 @@ print( mike_info.keys() )
 >>>> dict_keys(['name', 'age', 'location'])
 ```
 
+You can also sort a dictionary by its keys.
+
+```python
+students = ["Yana","John","Andrew","Tara","George","Maxim","Devanshu"]
+names = { person: len(person) for person in students}
+
+for person in sorted(names.keys()):
+  print( person, names[person] )
+>>>> Andrew 6
+>>>> Devanshu 8
+>>>> George 6
+>>>> John 4
+>>>> Maxim 5
+>>>> Tara 4
+>>>> Yana 4
+```
+
+### Exercise
+
+Write a function that takes in a dictionary of the prime decomposition of a number and returns the number itself. For example, `number( {2: 3, 3: 1, 5: 1, 7: 1} )` should output `840`.
 
 ## 6. Sets: (Defininition, what they are used for, unordered)
-7. What can go in a set?
-8. Getting the number of unique elements of a list.
 
-**Project**: Project Euler Problem 20, Prime Factor decomposition
+A set is similar to a list, except the order does not matter, and there cannot be repeated items. There are some technical reasons to use sets, but for now, just believe that they are easier for Python to handle than lists. The order of elements in the set are not preserved.
+
+```python
+# n = 840
+prime_factors = {2,3,5,7}
+print ( prime_factors )
+>>>> {2,3,5,7}
+```
+
+## 7. What can go in a set?
+
+Sets can hold strings and numbers, but cannot hold lists, dictionaries or other sets.
+
+## 8. Getting the number of unique elements of a list.
+
+Often times you will want to figure out the unique number of elements in a list. This can be done by first turning your list into a set, using `set()`, then turning it back into a list, using `list()`, then taking its length. Note that you cannot take the length of a set.
+
+```python
+prime_decomp = [2,2,2,3,3,5,7]
+number_primes = len( list( set(prime_decomp) ) )
+print( number_primes )
+>>>> 4
+```
+
+### Exercise
+
+You have found all primes less than 100 using a method that sometimes produces duplicates. Use Python to output the list of unique primes *in the correct order*.
+
+```python
+found_primes = [47, 67, 41, 5, 71, 43, 73, 89, 31, 11, 73, 97, 41, 43, 13, 7, 47, 5, 5, 83, 19, 61, 23, 23, 3, 59, 2, 79, 29, 53, 29, 13, 79, 3, 17, 31, 19, 89, 83, 59, 37, 3, 2, 97, 71, 17, 2, 11, 7, 11, 7, 13, 61, 17, 37, 53, 67]
+```
+
+## Project 1: Prime Factor decomposition
+
+1. Write a function that finds the prime factor decomposition of a number $n$.
+2. Write a function that finds the unique prime factors of a number $n$. This is the [Prime Omega function](https://en.wikipedia.org/wiki/Prime_omega_function).
+
+Make sure to save these functions as they are very handy to have around!
+
+## Project 2: Project Euler Problem 47
+
+Solve [Project Euler Problem 47](https://projecteuler.net/problem=47), which has to do with the number of unique prime factors of a number $n$. You will probably want to solve the previous project before you do this.
