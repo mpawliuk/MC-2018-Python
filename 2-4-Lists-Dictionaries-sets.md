@@ -55,12 +55,74 @@ print(odd_squares)
 
 ### Exercise
 
+You have data about how many math problems each person in the class has completed. Using list comprehension, make a list `most_exercises` which contains the names of the students who have completed more than 10 problems.
 
+```python
+students = [ ["Ethan", 12], ["Lizette", 19], ["Tara", 24], ["Oskar", 3] ]
+instructors = [ ["Mike", 97], ["Brian", 568] ]
+
+most_exercises = [] # <- Your code here
+```
 
 ## 3. Dictionaries: Keys and values
-4. Defining dictionaries explicitly, by value, by comprehension
-5. Dictionary Methods (`.keys()`, `.values()`, sorting)
-6. Sets: (Defininition, what they are used for, unordered)
+
+Lists of lists can store complex information, but it is often more natural to store this information as a `dictionary`. A dictionary is often a better way of doing this. It does not keep track of order.
+
+The `keys` are the names of the entries (name, age, location) the values are the actual entries (Mike, 30, Calgary). You can call an entry by using the formatting `dict[key]`.
+
+```python
+mike_info = {"name": "Mike", "age": 30, "location": "Calgary"}
+print( mike_info["age"] )
+>>>> 30
+```
+
+### Exercise
+
+Fill in an entry for your own information, similar to `mike_info`. Include at least one additional key.
+
+```python
+mike_info = {"name": "Mike", "age": 30, "location": "Calgary"}
+```
+
+## 4. Defining dictionaries explicitly, by value, by comprehension
+
+Dictionary values can be set by using the formatting `dict[key] = value`. When the key already exists, then you can use `dict[key] += 1` to increment the value.
+
+```python
+prime_decomp = {} # We will make the prime decomposition of 840 = 2 * 2 * 2 * 3 * 5 * 7. 
+prime_decomp[2] = 3
+prime_decomp[3] = 1
+prime_decomp[5] = 1
+prime_decomp[7] = 1
+
+print( prime_decomp )
+>>>> {2: 3, 3: 1, 5: 1, 7: 1}
+```
+
+Dictionaries can also be defined in a similar way to list comprehension.
+
+```python
+students = ["Yana","John","Andrew","Tara","George","Maxim","Devanshu","Max","Vishnu","Adrien","Audrey","Sophia","Joy","Lizette","Oskar","Will","Ethan"]
+names = { person: len(person) for person in students}
+print( names )
+>>>> {'Yana': 4, 'John': 4, 'Andrew': 6, 'Tara': 4, 'George': 6, 'Maxim': 5, 'Devanshu': 8, 'Max': 3, 'Vishnu': 6, 'Adrien': 6, 'Audrey': 6, 'Sophia': 6, 'Joy': 3, 'Lizette': 7, 'Oskar': 5, 'Will': 4, 'Ethan': 5}
+```
+
+### Exercise
+
+-----
+
+## 5. Dictionary Methods (`.keys()`, `.values()`, sorting)
+
+You can access the keys of a dictionary with `.keys()` and you can access the values by `.values()`.
+
+```python
+print( mike_info.keys() )
+>>>> dict_keys(['name', 'age', 'location'])
+```
+
+
+## 6. Sets: (Defininition, what they are used for, unordered)
 7. What can go in a set?
 8. Getting the number of unique elements of a list.
 
