@@ -29,7 +29,7 @@ def average(a, b):
 
 The first line starts with `def` which tells Python that we are defining a function. The name of the function is up to you, but make it decsriptive and readable. The input arguments `(a,b)` are contained in the paranthesis; you can have 0 arguments, or as many as you like. The **body** of the function is indented, and is where the code goes. 
 
-The first line of the body is always a commented string called the **docstring**; it always answers the question ``Hey function, what will you do?". Use grammar like `"""Give the average..."""` as opposed to `"""This gives the average"""`. Docstrings can be multiple lines.
+The first line of the body is always a commented string called the **docstring**; it always answers the question "Hey function, what will you do?". Use grammar like `"""Give the average..."""` as opposed to `"""This gives the average"""`. Docstrings can be multiple lines.
 
 The function can have many lines in its body, but it should have at least one `return` which tells it what to output. A function will stop running as soon as it hits a `return`. It is best practice to have each thing that could be returned be of the same `Type`.
 
