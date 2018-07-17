@@ -9,7 +9,6 @@
 5. `range(n)`
 6. Your first `for` loop
 7. `enumerate`, tuples
-8. `zip`
 
 ## 1. What can go in lists? (strings, integers, lists)
 
@@ -41,7 +40,7 @@ student_pairs = [ ["Ethan", "Oskar"], ["Lizette", "Tara"] ]
 
 To add items to a list we use `.append()`. To do this we call the method and Python will update the list.
 
-```
+```python
 students = ["Ethan", "Lizette", "Tara", "Oskar"]
 
 print(students)
@@ -56,7 +55,7 @@ print(students)
 
 To remove items to a list we use `.remove()`. To do this we call the method and Python will update the list. If you try to remove an item not in the list you will get an `Error`.
 
-```
+```python
 students = ["Ethan", "Lizette", "Tara", "Oskar"]
 
 print(students)
