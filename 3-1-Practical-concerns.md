@@ -5,6 +5,7 @@
 3. Runtime and memory differences (for loops, comprehension, lists vs iterators)
 4. Debug tools (printing, assert)
 5. Python 2 vs Python 3.
+6. Helper functions.
 
 **Project**: Project Euler Problems 81, 82, 83 (part 1)
 
