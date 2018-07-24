@@ -139,10 +139,64 @@ There are some differences between Python 2 and 3 that you should be aware of.
 4. Python 2 lets you call variables you defined for a for loop outside of that loop, but Python 3 does not. (That's a good change!)
 
 ```python
-for i in range(5):
-  print (i**2)
+x = [i**2 for i in range(5)]
 # This works in Python 2, but not in Python 3
-print i
+print( i )
+```
+
+## 6. Helper functions
+
+When you are running the same operation over and over, consider writing a function that does that. It's better for readability and debugging.
+
+```python
+def display_sum_powers(n):
+  """Give the sums of numbers 1 to n, sum of squares and sum of cubes."""
+  total1 = sum([i for i in range(n+1)])
+  total2 = sum([i**2 for i in range(n+1)])
+  total3 = sum([i**3 for i in range(n+1)])
+  return total1, total2, total3
+```
+
+Instead of this, lets define a function that adds up powers, and call that instead.
+
+```python
+def sum_pow(n,k):
+  """Give the sums of numbers 1^k to n^k."""
+  return sum([i**k for i in range(n+1)])
+
+def sums_of_powers(n):
+  """Give the sums of numbers 1 to n, sum of squares and sum of cubes."""
+  return sum_pow(n,1), sum_pow(n,2), sum_pow(n,3)
+```
+
+### Exercise - Help Ursula out
+
+Ursula has an error in her code, but she's unable to find it because she has repeated blocks of code instead of using helper functions. Write a helper function called `w_total(start, end)`, and replace her blocks of code with calls of this function.
+
+```python
+def w_total(start, end):
+  """Give the sum of numbers start to end-1, multiplied by 10."""
+  # YOUR CODE HERE
+
+weighted_total = 0
+for i in range(0,5):
+  weighted_total += 10*i
+print (weighted_total)
+
+weighted_total = 0
+for i in range(5,10):
+  weighted_total += 10*i
+print (weighted_total)
+
+weighted_total = 0
+for i in range(10,15):
+  weighted_total += 10**i
+print (weighted_total)
+
+weighted_total = 0
+for i in range(15,20):
+  weighted_total += 10*i
+print (weighted_total)
 ```
 
 ## Project 1. Project Euler Problem 34
