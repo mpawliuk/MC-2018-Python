@@ -117,6 +117,7 @@ Define a dictionary called `attendance` whose keys are `number_theory`, `python`
 You can access the keys of a dictionary with `.keys()` and you can access the values by `.values()`.
 
 ```python
+mike_info = {"name": "Mike", "age": 30, "location": "Calgary"}
 print( mike_info.keys() )
 >>>> dict_keys(['name', 'age', 'location'])
 ```
