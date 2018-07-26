@@ -58,8 +58,6 @@ Use the `matplotlib` package to plot and display the data we gathered. Change th
 
 ```python
 import numpy as np
-
-import numpy as np
 import matplotlib.pyplot as plt
 
 x = np.array([i for i in range(2,10)])
