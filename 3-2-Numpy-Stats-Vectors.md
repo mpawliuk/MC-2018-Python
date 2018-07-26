@@ -169,3 +169,18 @@ Choose one of the following projects:
 
 Here's the list of data for the Georgia Population:
 population = [3.94, 4.59, 5.46, 5.57, 5.65, 5.73, 5.84, 5.96, 6.09, 6.21, 6.32, 6.41, 6.48, 6.65, 6.82, 6.98, 7.16, 7.33, 7.5, 7.69, 7.86, 8.05, 8.18, 8.42, 8.59, 8.74, 8.91, 9.1, 9.33, 9.53, 9.7, 9.83, 9.71, 9.81, 9.91, 9.98, 10.08, 10.2, 10.31, 10.43]
+
+Here's the code for reading from a file `data.txt`
+
+```python
+import numpy as np
+
+f = open("data.txt","r")
+data = [[int(line.split("\t")[0]), float(line.split("\t")[1][:-2])] for line in f]
+
+x = np.array([pair[0] for pair in data])
+y = np.array([pair[1] for pair in data])
+
+print(x)
+f.close()
+```
